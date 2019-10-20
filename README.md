@@ -220,6 +220,8 @@ Input: `["apple", "apple", "banana", "banana", "banana", "cake", "cake"]`
 
 Output: `["apple", "banana", "cake"]`
 
+
+
 2. **Given a String, find the most frequently occurring letter**
 
 Input: `Never trust a computer you can't throw out a window ~ Steve Wozniak`
@@ -285,10 +287,27 @@ Output: `[1,3,5]`
 2. **Given a String and an instance of StringType (defined below), return the String either lowercased or uppercased**
 
 ```swift
+//answer:
+
 enum StringType {
     case lowercase
     case uppercase
+    
+    func cases(sentence: String) -> String {
+        switch self {
+        case .lowercase :
+            return sentence.lowercased()
+        case .uppercase :
+            return sentence.uppercased()
+        }
+    }
 }
+
+var sentence = "Design is not just what it looks like and feels like. Design is how it works"
+
+var allCaps = StringType.uppercase.cases(sentence: sentence)
+
+print(allCaps)
 ```
 
 Input: `"Design is not just what it looks like and feels like. Design is how it works", .uppercase`
