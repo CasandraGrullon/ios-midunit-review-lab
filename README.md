@@ -9,6 +9,15 @@ Input: `Hello, there`
 
 Output: `HELLO, THERE`
 
+```swift
+var input = "Hello, there"
+var output = ""
+for char in input.lowercased() {
+output += char.uppercased()
+}
+print(output)
+```
+
 2. **Given a String, return a String alternating between uppercase and lowercase letters**
 
 
@@ -32,12 +41,34 @@ Output: `Hllo, thr`
 Input: `[1,5,2,4,1,4]`
 
 Output: `5`
+```swift
+var input3 = [1,5,2,4,1,4]
+var output3 = Int()
+
+for num in input3.sorted() {
+    if num == input3.sorted()[input3.count - 1]{
+        output3 = num
+    }
+}
+print(output3)
+```
 
 2. **Given an array of type [Int], return the smallest element**
 
 Input: `[1,5,2,4,1,4]`
 
 Output: `1`
+``` swift
+var input3 = [1,5,2,4,1,4]
+var output3 = Int()
+
+for num in input3.sorted() {
+    if num == input3.sorted()[0]{
+        output3 = num
+    }
+}
+print(output3)
+```
 
 3. **Given an array of type [Int], return its sum**
 
@@ -45,11 +76,28 @@ Input: `[1,5,2,4,1,4]`
 
 Output: `17`
 
+```swift
+for num in input3 {
+    output4 += num
+}
+print(output4)
+```
+
 4. **Given an array of type [Double], return its average**
 
 Input: `[3,4.5,7.5,2,1]`
 
 Output: `3.6`
+```swift
+var input5 : [Double] = [3, 4.5, 7.5, 2, 1]
+var output5 = Double()
+var sum = Double()
+for num in input5[0..<input5.count] {
+    sum += num
+    output5 = sum / Double((input5.count))
+}
+print(output5)
+```
 
 5. **Given an array of type [Double] and a Double, return the sum of all numbers in the array greater than a given number**
 
