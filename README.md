@@ -104,6 +104,18 @@ print(output5)
 Input: `[3,4.5,7.5,2,1], 3`
 
 Output: `12`
+```swift
+var input6 = [3,4.5,7.5,2,1]
+var number : Double = 3
+var sumof6 = Double()
+
+for num in input6 {
+    if num > number {
+        sumof6 += num
+    }
+}
+print(sumof6)
+```
 
 
 6. **Given an array of type [Double], return the product of all the elements**
@@ -111,12 +123,26 @@ Output: `12`
 Input: `[3,4.5,7.5,2,1]`
 
 Output: `202.5`
+```swift
+var product = input6.reduce(1, *)
+```
 
 7. **Given an array of type [Int], return the second smallest value in the array**
 
 Input: `[3,6,1,9,4,8]`
 
 Output: `3`
+```swift
+var input7 = [3,6,1,9,4,8]
+var output7 = Int()
+
+for (index, num) in (input7.sorted()).enumerated() {
+    if index == 1 {
+        output7 = num
+    }
+}
+print(output7)
+```
 
 ## Optionals
 
@@ -126,11 +152,34 @@ Input: `[nil, "We", "come", nil, "in", "peace"]`
 
 Output: `["We", "come", "in", "peace"]`
 
+```swift
+var input8 = [nil, "We", "come", nil, "in", "peace"]
+var output8 = [String]()
+
+for str in input8 {
+    if str != nil {
+        output8.append(str ?? " ")
+    }
+}
+print(output8)
+```
+
 2. **Given an array of type [String?]? return an array of [String] removing all nil values**
 
 Input: `nil`
 
 Output: `[]`
+
+```swift
+var optInput : [String?] = [nil]
+var optOutput = [String]()
+for word in optInput {
+    if word != nil {
+        optOutput.append(word ?? "")
+    }
+}
+print(optOutput)
+```
 
 3. **Given an array of type [Int?] return the sum of all non-nil values.  Use guard statements in your solution.**
 
@@ -143,6 +192,18 @@ Output: `18`
 Input: `nil`
 
 Output: `0`
+```swift
+var optInput2 : [Int?] = [nil]
+var optOutput2 = [Int]()
+for num in optInput2 {
+    if num != nil {
+        let sum = (num ?? 0) + (num ?? 0)
+        optOutput2.append(sum)
+    }
+}
+print(optOutput2)
+```
+
 
 5. **Given an array of type [Int?] and an optional Int, return the sum of all values not equal to the given number.  If the given number is nil, return the sum of all non-nil values.**
 
